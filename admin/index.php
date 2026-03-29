@@ -132,7 +132,9 @@ function nomeCategoria($categoria) {
   <span class="admin-tag"><?= htmlspecialchars(nomeCategoria($produto['categoria'])) ?></span>
   <h3><?= htmlspecialchars($produto['nome']) ?></h3>
   <p class="admin-price"><?= htmlspecialchars($produto['preco']) ?></p>
-  <p class="admin-description"><?= htmlspecialchars($produto['descricao']) ?></p>
+   <p style="line-height:1.5; height:3em; overflow:hidden; margin:0;">
+  <?= htmlspecialchars($produto['descricao']) ?>
+</p>
 
    <div class="admin-actions">
   <a class="admin-btn-edit" href="editar_produto.php?id=<?= $produto['id'] ?>">Editar</a>

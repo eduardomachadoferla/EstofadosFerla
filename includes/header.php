@@ -13,24 +13,29 @@
 <body>
 <header class="topbar">
   <div class="container navbar">
-    <a href="/index.php" class="logo">
+    <a href="/estofadosferla/index.php" class="logo">
       <strong>FERLA</strong>
       <span>ESTOFADOS</span>
     </a>
 
     <ul class="menu">
-      <li><a href="/index.php#inicio">Início</a></li>
-<li class="dropdown">
-  <a href="#">Todos os Produtos ▾</a>
-  <ul class="dropdown-menu">
-    <li><a href="/estofadosferla/index.php#sofas">Sofás</a></li>
-    <li><a href="/estofadosferla/index.php#poltronas">Poltronas</a></li>
-    <li><a href="/estofadosferla/index.php#cadeiras">Cadeiras</a></li>
-    <li><a href="/estofadosferla/index.php#cabeceiras">Cabeceiras</a></li>
-  </ul>
-</li>
-</li>
-      <li><a href="/index.php#sobre">Sobre Nós</a></li>
+      <li><a href="/estofadosferla/index.php">Início</a></li>
+      <li><a href="/estofadosferla/index.php#produtos">Todos os Produtos</a></li>
+      <li><a href="/estofadosferla/sobre.php">Sobre Nós</a></li>
     </ul>
+
+    <form method="GET" action="/estofadosferla/index.php#produtos" class="search-form">
+      <input
+        type="text"
+        name="busca"
+        placeholder="Pesquise por sofá, poltrona, cabeceira..."
+        value="<?= htmlspecialchars($_GET['busca'] ?? '') ?>"
+      >
+      <button type="submit">Buscar</button>
+
+      <?php if (!empty($_GET['busca'] ?? '')): ?>
+        <a href="/estofadosferla/index.php#produtos" class="outline-btn">Limpar</a>
+      <?php endif; ?>
+    </form>
   </div>
 </header>
