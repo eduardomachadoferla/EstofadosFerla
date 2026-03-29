@@ -44,19 +44,17 @@ include __DIR__ . '/includes/header.php';
           </ul>
         </div>
 
-        <div class="buy-box">
-          <div class="price-line"></div>
-          <div class="product-price"><?= htmlspecialchars($produto['preco']) ?></div>
-          <a
-            class="whatsapp-btn"
-            target="_blank"
-            href="https://wa.me/5500000000000?text=Olá, tenho interesse no produto <?= urlencode($produto['nome']) ?>">
-            COMPRAR PELO WHATSAPP
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
+<div class="buy-box">
+  <div class="price-line"></div>
+  <div class="product-price"><?= htmlspecialchars($produto['preco']) ?></div>
+
+  <a
+    class="whatsapp-btn"
+    target="_blank"
+    href="https://wa.me/554598175947?text=<?= urlencode('Olá, tenho interesse no produto ' . $produto['nome']) ?>">
+    COMPRE AQUI
+  </a>
+</div>
 </main>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
