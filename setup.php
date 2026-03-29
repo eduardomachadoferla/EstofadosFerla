@@ -11,7 +11,13 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos (
     destaque INTEGER DEFAULT 1,
     criado_em DATETIME DEFAULT CURRENT_TIMESTAMP
 )";
+$sql2 = "CREATE TABLE IF NOT EXISTS produto_imagens (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    produto_id INTEGER,
+    caminho TEXT
+)";
 
+$pdo->exec($sql2);
 $pdo->exec($sql);
 
 echo 'Banco e tabela criados com sucesso!';

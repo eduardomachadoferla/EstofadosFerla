@@ -13,6 +13,7 @@
 <body>
 <header class="topbar">
   <div class="container navbar">
+    
     <a href="/estofadosferla/index.php" class="logo">
       <strong>FERLA</strong>
       <span>ESTOFADOS</span>
@@ -20,22 +21,25 @@
 
     <ul class="menu">
       <li><a href="/estofadosferla/index.php">Início</a></li>
-      <li><a href="/estofadosferla/index.php#produtos">Todos os Produtos</a></li>
+      <li><a href="/estofadosferla/index.php#produtos">Produtos</a></li>
       <li><a href="/estofadosferla/sobre.php">Sobre Nós</a></li>
+      <li><a href="https://wa.me/554598175947" target="_blank">WhatsApp</a></li>
     </ul>
 
     <form method="GET" action="/estofadosferla/index.php#produtos" class="search-form">
       <input
         type="text"
         name="busca"
-        placeholder="Pesquise por sofá, poltrona, cabeceira..."
+        placeholder="Buscar produtos..."
         value="<?= htmlspecialchars($_GET['busca'] ?? '') ?>"
       >
+
       <button type="submit">Buscar</button>
 
       <?php if (!empty($_GET['busca'] ?? '')): ?>
         <a href="/estofadosferla/index.php#produtos" class="outline-btn">Limpar</a>
       <?php endif; ?>
     </form>
+
   </div>
 </header>

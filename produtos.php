@@ -15,29 +15,30 @@ include __DIR__ . '/includes/header.php';
 ?>
 
 <main class="product-page">
-  <div class="container">
-    <a href="/index.php#produtos" class="back-link">← Voltar aos produtos</a>
+    <div class="container">
+        <a href="/index.php#produtos" class="back-link">← Voltar aos produtos</a>
 
-    <section class="product-layout">
-      <div class="product-image-box">
-        <img src="<?= htmlspecialchars($produto['imagem']) ?>" alt="<?= htmlspecialchars($produto['nome']) ?>">
-      </div>
+        <section class="product-layout">
+            <div class="product-image-box">
+                <img src="<?= htmlspecialchars($produto['imagem']) ?>" alt="<?= htmlspecialchars($produto['nome']) ?>">
+            </div>
 
-      <div class="product-info">
-        <span class="product-category"><?= htmlspecialchars($produto['categoria']) ?></span>
-        <h1><?= htmlspecialchars($produto['nome']) ?></h1>
-        <p class="product-description"><?= htmlspecialchars($produto['descricao']) ?></p>
+            <div class="product-info">
+                <span class="product-category"><?= htmlspecialchars($produto['categoria']) ?></span>
+                <h1><?= htmlspecialchars($produto['nome']) ?></h1>
+                <p class="product-description"><?= htmlspecialchars($produto['descricao']) ?></p>
 
-        <div class="buy-box">
-          <div class="price-line"></div>
-          <div class="product-price"><?= htmlspecialchars($produto['preco']) ?></div>
-          <a class="whatsapp-btn" target="_blank" href="https://wa.me/5500000000000?text=Olá, tenho interesse no produto <?= urlencode($produto['nome']) ?>">
-            COMPRAR PELO WHATSAPP
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
+                <div class="buy-box">
+                    <div class="price-line"></div>
+                    <div class="product-price"><?= htmlspecialchars($produto['preco']) ?></div>
+                    <a class="whatsapp-btn" target="_blank"
+                        href="https://wa.me/5500000000000?text=Olá, tenho interesse no produto <?= urlencode($produto['nome']) ?>">
+                        COMPRAR PELO WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
 </main>
 
 <?php include __DIR__ . '/includes/footer.php'; ?>
